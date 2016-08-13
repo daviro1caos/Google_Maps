@@ -29,17 +29,16 @@
 - (void)createMap {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:21.1047                                                            longitude:-104.43
+                                                                 zoom:16];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.85, 151.20);
-    marker.title = @"UAG";
+    marker.position = CLLocationCoordinate2DMake(21.1047, -104.43 );
+    marker.title = @"Jala";
     marker.snippet = @"Clase de Maestría";
     marker.map = mapView_;
 }
