@@ -6,6 +6,7 @@
 //
 
 #import "Start.h"
+#import <Google/Analytics.h>
 @import GoogleMaps;
 
 @interface Start ()
@@ -21,6 +22,12 @@
     [self createMap];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Start"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -30,7 +37,7 @@
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:21.1047                                                            longitude:-104.43
-                                                                 zoom:16];
+                                                                 zoom:10];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;

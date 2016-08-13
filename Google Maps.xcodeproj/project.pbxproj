@@ -16,6 +16,7 @@
 		652C74A21D5E4108002E10F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652C74A11D5E4108002E10F6 /* Assets.xcassets */; };
 		652C74A51D5E4108002E10F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652C74A31D5E4108002E10F6 /* LaunchScreen.storyboard */; };
 		652C74AF1D5E4A95002E10F6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 652C74AE1D5E4A95002E10F6 /* Podfile */; };
+		652C74B11D5EBB9D002E10F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 652C74B01D5EBB9D002E10F6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		652C74A11D5E4108002E10F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		652C74A41D5E4108002E10F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		652C74A61D5E4108002E10F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		652C74AE1D5E4A95002E10F6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		652C74AE1D5E4A95002E10F6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		652C74B01D5EBB9D002E10F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C9F45421DB92F30240028E6 /* Pods-Google Maps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Maps.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Maps/Pods-Google Maps.release.xcconfig"; sourceTree = "<group>"; };
 		F900E2C5BE6CFC5B15488DEA /* Pods-Google Maps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Maps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google Maps/Pods-Google Maps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 		652C74911D5E4108002E10F6 /* Google Maps */ = {
 			isa = PBXGroup;
 			children = (
+				652C74B01D5EBB9D002E10F6 /* GoogleService-Info.plist */,
 				652C74AD1D5E4147002E10F6 /* Main */,
 				652C74AC1D5E4132002E10F6 /* Controllers */,
 				652C749B1D5E4108002E10F6 /* Main.storyboard */,
@@ -187,6 +190,7 @@
 			files = (
 				652C74A51D5E4108002E10F6 /* LaunchScreen.storyboard in Resources */,
 				652C74A21D5E4108002E10F6 /* Assets.xcassets in Resources */,
+				652C74B11D5EBB9D002E10F6 /* GoogleService-Info.plist in Resources */,
 				652C74AF1D5E4A95002E10F6 /* Podfile in Resources */,
 				652C749D1D5E4108002E10F6 /* Main.storyboard in Resources */,
 			);

@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  Google Maps
 //
-//  Created by Walter Gonzalez Domenzain on 01/07/16.
-//  Copyright © 2016 Smartplace. All rights reserved.
+//  Created by Daniel on 8/12/16.
+//  Copyright © 2016 DanielCompany. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import <Google/Analytics.h>
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -18,6 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [GMSServices provideAPIKey:@"AIzaSyAQoO7VznhJ9z_nIwgtLmD-fhCU9yr7nb8"];
+    
+    // Configure tracker from GoogleService-Info.plist.
+    NSError *configureError;
+    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+    
+    // Optional: configure GAI options.
+    GAI *gai = [GAI sharedInstance];
+    gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
+    gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
+
+    
     return YES;
 }
 
