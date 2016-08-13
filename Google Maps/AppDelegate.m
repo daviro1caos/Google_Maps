@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  Google Maps
 //
-//  Created by Daniel on 8/12/16.
-//  Copyright © 2016 DanielCompany. All rights reserved.
+//  Created by Walter Gonzalez Domenzain on 01/07/16.
+//  Copyright © 2016 Smartplace. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,8 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    [GMSServices provideAPIKey:@"AIzaSyC_YRSzlPMWGpBTy94TAhraCVfDc9Udx-0"];
+    [GMSServices provideAPIKey:@"AIzaSyAQoO7VznhJ9z_nIwgtLmD-fhCU9yr7nb8"];
     return YES;
 }
 
@@ -53,7 +52,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "danielcom.Google_Maps" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.smartplace.Google_Maps" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -125,5 +124,4 @@
         }
     }
 }
-
 @end
